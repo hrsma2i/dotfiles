@@ -1,3 +1,1 @@
-source $HOME/.vimrc
-
-"set termguicolors
+/home/hiroshimatsui/.dotfiles/.vimrc
