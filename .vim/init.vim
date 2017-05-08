@@ -1,1 +1,1 @@
-/home/hiroshimatsui/.dotfiles/.vimrc
+../.vimrc
