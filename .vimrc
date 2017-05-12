@@ -85,6 +85,8 @@ set incsearch
 " Other
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set wildmenu
+" clip board "
+set clipboard+=unnamedplus
 
 nnoremap j gj
 nnoremap k gk
