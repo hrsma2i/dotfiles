@@ -92,7 +92,7 @@ nnoremap k gk
 set encoding=utf8
 
 " _ を単語としてカウントしない
-set iskeyword-=_
+" set iskeyword-=_
 
 inoremap jj <ESC>
 " Up/Down by half a page
