@@ -1,4 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -29,10 +29,16 @@ if dein#load_state(s:dein_dir)
   call dein#add('Shougo/vimproc')
   call dein#add('Shougo/denite.nvim')
   call dein#add('Shougo/deoplete.nvim')
-  let g:deoplete#enable_at_startup = 1
   call dein#add('jiangmiao/auto-pairs')
   call dein#add('tpope/vim-surround')
-"  call dein#add('davidhalter/jedi-vim')
+  " markdown
+  call dein#add('godlygeek/tabular')
+  call dein#add('plasticboy/vim-markdown')
+  call dein#add('iwataka/minidown.vim')
+  call dein#add('kannokanno/previm')
+  call dein#add('zchee/deoplete-jedi')
+  call dein#add('davidhalter/jedi')
+  " call dein#add('tyru/open-browser.vim')
 
   call dein#end()
   call dein#save_state()
@@ -45,6 +51,21 @@ endif
 
 filetype plugin indent on
 syntax enable
+
+" settging for each plugin
+" vimproc
+let g:vimproc#dll_path = '~/.cache/dein/repos/github.com/Shougo/vimproc/lib/vimproc_mac.so'
+" deoplete
+let g:deoplete#enable_at_startup = 1
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" previm
+let g:previm_open_cmd = "open -a Safari"
+augroup PrevimSettings
+    autocmd!
+    autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+augroup END
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " UI 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
