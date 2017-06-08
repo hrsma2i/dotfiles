@@ -50,6 +50,7 @@ export XDG_CONFIG_HOME=$HOME/.dotfiles
 alias l=ls
 alias la="ls -a"
 alias ll="ls -al"
+alias dt="cd ~/.dotfiles"
 
 #---------------------
 # pyenv
@@ -77,6 +78,9 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 #先方予測
 #autoload predict-on
 #predict-on
+
+# ls color
+export LSCOLORS=Gxfxcxdxbxegedabagacab
 
 #---------------------
 # history
