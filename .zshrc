@@ -15,8 +15,6 @@ case ${OSTYPE} in
 		path_append /Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin
 		export PATH=$PATH:/Users/hiroshi/pycli
 		export PATH=$PATH:/Users/hiroshi/ta
-		# dein root
-		export XDG_CONFIG_HOME=$HOME/.dotfiles
 
 		#aliases
 		source $HOME/.dotfiles_old/.zsh/aliases.zsh
@@ -42,6 +40,9 @@ case ${OSTYPE} in
 		export ZPLUG_HOME=~/.linuxbrew/opt/zplug
 		;;
 esac
+
+# dein root
+export XDG_CONFIG_HOME=$HOME/.dotfiles
 
 #---------------------
 # pyenv
