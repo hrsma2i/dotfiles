@@ -6,17 +6,40 @@
 #. /usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh
 # Created by newuser for 5.2
 
-#paths
-path_prepend /usr/local/bin
-path_append /Applications/MacVim.app/Contents/MacOS
-path_append ~/.dotfiles_old/.zsh/bin/
-path_append /Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin
-export PATH=$PATH:/Users/hiroshi/pycli
-export PATH=$PATH:/Users/hiroshi/ta
-export XDG_CONFIG_HOME=$HOME/.dotfiles
+case ${OSTYPE} in
+	darwin*)
+		#paths
+		path_prepend /usr/local/bin
+		path_append /Applications/MacVim.app/Contents/MacOS
+		path_append ~/.dotfiles_old/.zsh/bin/
+		path_append /Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin
+		export PATH=$PATH:/Users/hiroshi/pycli
+		export PATH=$PATH:/Users/hiroshi/ta
+		export XDG_CONFIG_HOME=$HOME/.dotfiles
 
-#aliases
-source $HOME/.dotfiles_old/.zsh/aliases.zsh
+		#aliases
+		source $HOME/.dotfiles_old/.zsh/aliases.zsh
+		
+		#---------------------
+		# pyenv
+		#---------------------
+		export PYENV_ROOT=/usr/local/var/pyenv
+		if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+		#---------------------
+		# ssh-agent
+		#---------------------
+		ssh-add -K ~/.ssh/amenbo >> /dev/null
+		ssh-add -K ~/.ssh/github_hrsma2i >> /dev/null
+
+		#---------------------
+		# zplug HOME
+		#---------------------
+		export ZPLUG_HOME=/usr/local/opt/zplug
+		;;
+	linux*)
+		;;
+esac
 
 #---------------------
 #prompt 
@@ -78,18 +101,6 @@ setopt auto_pushd
 # pushd したとき、ディレクトリがすでにスタックに含まれていればスタックに追加しない
 setopt pushd_ignore_dups
 
-
-#---------------------
-# pyenv
-#---------------------
-export PYENV_ROOT=/usr/local/var/pyenv
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-
-#---------------------
-# ssh-agent
-#---------------------
-ssh-add -K ~/.ssh/amenbo >> /dev/null
-ssh-add -K ~/.ssh/github_hrsma2i >> /dev/null
 
 
 #---------------------
@@ -161,7 +172,6 @@ function zle-keymap-select zle-line-init zle-line-finish
 #---------------------
 # zplug
 #---------------------
-export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 # 未インストール項目をインストールする
 if ! zplug check --verbose; then
