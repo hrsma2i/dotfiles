@@ -129,37 +129,37 @@ export SPACESHIP_PROMPT_SYMBOL=" \b"
 
 # user
 export SPACESHIP_USER_PREFIX=" "
-export SPACESHIP_USER_COLOR="237}%b%K{14"
+export SPACESHIP_USER_COLOR="0}%b%K{14"
 export SPACESHIP_USER_SUFFIX="%K{14} %b%F{14}%K{6}⮀%f%k"
 
 # host
 export SPACESHIP_HOST_PREFIX="%K{6} "
 export SPACESHIP_HOST_COLOR="15}%b%K{6"
-export SPACESHIP_HOST_SUFFIX="%K{6} %b%F{6}%K{237}⮀%f%k\n"
+export SPACESHIP_HOST_SUFFIX="%K{6} %b%F{6}%K{0}⮀%f%k\n"
 
 # git
 export SPACESHIP_GIT_SYMBOL="  "
 export SPACESHIP_GIT_PREFIX=" \b"
-export SPACESHIP_GIT_BRANCH_COLOR="}%F{237}%K{10"
+export SPACESHIP_GIT_BRANCH_COLOR="}%F{0}%K{10"
 export SPACESHIP_GIT_STATUS_COLOR=$SPACESHIP_GIT_BRANCH_COLOR
-export SPACESHIP_GIT_SUFFIX="%K{10} %b%F{10}%K{237}⮀%f%k"
+export SPACESHIP_GIT_SUFFIX="%K{10} %b%F{10}%K{0}⮀%f%k"
 
 # dir
-export SPACESHIP_DIR_PREFIX="%K{237} "
-export SPACESHIP_DIR_COLOR="11}%K{237"
-export SPACESHIP_DIR_SUFFIX="%K{237} %b%F{237}%K{8}⮀%F{8}%K{237}⮀%f%k\n"
+export SPACESHIP_DIR_PREFIX="%K{0} "
+export SPACESHIP_DIR_COLOR="11}%K{0"
+export SPACESHIP_DIR_SUFFIX="%K{0} %b%F{0}%K{8}⮀%F{8}%K{0}⮀%f%k\n"
 
 # pyenv
-export SPACESHIP_PYENV_COLOR="237}%K{8"
-export SPACESHIP_PYENV_SUFFIX="%K{8} %F{8}%K{237}⮀%f%k\n"
+export SPACESHIP_PYENV_COLOR="0}%K{8"
+export SPACESHIP_PYENV_SUFFIX="%K{8} %F{8}%K{0}⮀%f%k\n"
 
 # zle vi mode
 zle -N zle-line-init
 zle -N zle-line-finish
 zle -N zle-keymap-select
-export SPACESHIP_VI_MODE_INSERT="%K{237}%F{8} INSERT "
-export SPACESHIP_VI_MODE_NORMAL="%K{11}%F{237} NORMAL "
-export SPACESHIP_VI_MODE_SUFFIX="%F{237}%K{8}⮀%b%F{8}%K{7}⮀%F{7}%K{237}⮀%f%k"
+export SPACESHIP_VI_MODE_INSERT="%K{0}%F{8} INSERT "
+export SPACESHIP_VI_MODE_NORMAL="%K{11}%F{0} NORMAL "
+export SPACESHIP_VI_MODE_SUFFIX="%b%F{0}%K{8}⮀%F{8}%K{7}⮀%F{7}%K{0}⮀%f%k"
 export SPACESHIP_VI_MODE_COLOR=$VI_INSERT_MODE_COLOR
 #color palet
 #Black   [ 0] [ 8]
@@ -174,10 +174,10 @@ function zle-keymap-select zle-line-init zle-line-finish
 {
 	case $KEYMAP in
 		main|viins)
-			export SPACESHIP_VI_MODE_SUFFIX="%F{237}%K{8}⮀%b%F{8}%K{7}⮀%F{7}%K{237}⮀%f%k"
+			export SPACESHIP_VI_MODE_SUFFIX="%b%F{0}%K{8}⮀%F{8}%K{7}⮀%F{7}%K{0}⮀%f%k"
 			;;
 		vicmd)
-			export SPACESHIP_VI_MODE_SUFFIX="%F{11}%K{237}⮀%b%F{237}%K{11}⮀%F{11}%K{237}⮀%f%k"
+			export SPACESHIP_VI_MODE_SUFFIX="%b%F{11}%K{0}⮀%F{0}%K{11}⮀%F{11}%K{0}⮀%f%k"
 			;;
 	esac
 	zle reset-prompt
