@@ -42,7 +42,7 @@ esac
 #---------------------
 # pyenv
 #---------------------
-export PYENV_ROOT=~/.dotfiles/.pyenv
+export PYENV_ROOT=~/.pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 #---------------------
