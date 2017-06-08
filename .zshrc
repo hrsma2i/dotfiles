@@ -15,6 +15,7 @@ case ${OSTYPE} in
 		path_append /Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin
 		export PATH=$PATH:/Users/hiroshi/pycli
 		export PATH=$PATH:/Users/hiroshi/ta
+		# dein root
 		export XDG_CONFIG_HOME=$HOME/.dotfiles
 
 		#aliases
@@ -155,8 +156,6 @@ zle -N zle-keymap-select
 export SPACESHIP_VI_MODE_INSERT="%K{8} INSERT "
 export SPACESHIP_VI_MODE_NORMAL="%K{9}%F{237} NORMAL "
 export SPACESHIP_VI_MODE_SUFFIX="%F{8}⮀"
-fgcolor=15
-bgcolor=8
 export SPACESHIP_VI_MODE_COLOR=$VI_INSERT_MODE_COLOR
 #color palet
 #Black   [ 0] [ 8]
