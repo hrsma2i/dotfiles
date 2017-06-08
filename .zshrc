@@ -20,6 +20,9 @@ case ${OSTYPE} in
 		#aliases
 		source $HOME/.dotfiles_old/.zsh/aliases.zsh
 		
+		#環境変数LANG
+		export LANG=ja_JP.UTF-8
+		
 		#---------------------
 		# ssh-agent
 		#---------------------
@@ -62,8 +65,6 @@ autoload -U compinit
 compinit
 #大文字と小文字区別しない
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-#環境変数LANG
-export LANG=ja_JP.UTF-8
 #先方予測
 #autoload predict-on
 #predict-on
