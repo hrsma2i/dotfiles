@@ -6,6 +6,8 @@
 #. /usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh
 # Created by newuser for 5.2
 
+export TERM='xterm-256color'
+
 case ${OSTYPE} in
 	darwin*)
 		#paths
