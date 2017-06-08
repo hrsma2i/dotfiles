@@ -215,7 +215,7 @@ zplug load --verbose
 dtu () {
 	cd ~/.dotfiles
 	git add .
-	git commit -am "fix: "$1
+	git commit -am "fixed: "$1
 	git push origin master
 	cd -
 }
