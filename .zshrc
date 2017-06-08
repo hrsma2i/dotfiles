@@ -81,8 +81,30 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 #autoload predict-on
 #predict-on
 
-# ls color
-export LSCOLORS=Gxfxcxdxbxegedabagacab
+#---------------------
+#ls color
+#---------------------
+#color palet
+#Black   [ a] [ A]
+#Red     [ b] [ B]
+#Green   [ c] [ C]
+#Yellow  [ d] [ D]
+#Blue    [ e] [ E]
+#Magenta [ f] [ F]
+#Cyan    [ g] [ G]
+#White   [ h] [ H]
+#
+#x: clear
+
+#=[foreground][background]
+color_directory=Gx
+color_symlink=Fx
+color_socket=Cx
+color_pipe=Cx
+color_excutable=bx
+color_block=Cg
+color_character=Cd
+export LSCOLORS="${color_directory}${color_symlink}${color_socket}${color_pipe}${color_excutable}${color_block}${color_character}abagacad"
 
 #---------------------
 # history
