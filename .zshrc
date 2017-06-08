@@ -19,6 +19,7 @@ case ${OSTYPE} in
 		export PATH=$PATH:/Users/hiroshi/ta
 
 		#aliases
+		alias ls="ls -GF" # ls color
 		source $HOME/.dotfiles_old/.zsh/aliases.zsh
 		
 		#環境変数LANG
@@ -36,6 +37,7 @@ case ${OSTYPE} in
 		export ZPLUG_HOME=/usr/local/opt/zplug
 		;;
 	linux*)
+		alias ls="ls -F --color" # ls color
 		#---------------------
 		# zplug HOME
 		#---------------------
@@ -47,7 +49,6 @@ esac
 export XDG_CONFIG_HOME=$HOME/.dotfiles
 
 # alias
-alias ls="ls -F --color" # for Linux ls color
 alias l=ls
 alias la="ls -a"
 alias ll="ls -al"
@@ -207,3 +208,20 @@ fi
 # コマンドをリンクして、PATH に追加し、プラグインは読み込む
 zplug load --verbose
 
+#---------------------
+# git dotfiles
+#---------------------
+# upload
+dtu () {
+	cd ~/.dotfiles
+	git add .
+	git commit -am $1
+	git push origin master
+	cd -
+}
+# download
+dtd () {
+	cd ~/.dotfiles
+	git pull origin master
+	cd -
+}
