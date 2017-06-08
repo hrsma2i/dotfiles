@@ -21,12 +21,6 @@ case ${OSTYPE} in
 		source $HOME/.dotfiles_old/.zsh/aliases.zsh
 		
 		#---------------------
-		# pyenv
-		#---------------------
-		export PYENV_ROOT=/usr/local/var/pyenv
-		if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-
-		#---------------------
 		# ssh-agent
 		#---------------------
 		ssh-add -K ~/.ssh/amenbo >> /dev/null
@@ -38,8 +32,18 @@ case ${OSTYPE} in
 		export ZPLUG_HOME=/usr/local/opt/zplug
 		;;
 	linux*)
+		#---------------------
+		# zplug HOME
+		#---------------------
+		export ZPLUG_HOME=~/.linuxbrew/opt/zplug
 		;;
 esac
+
+#---------------------
+# pyenv
+#---------------------
+export PYENV_ROOT=~/.dotfiles/.pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 #---------------------
 #prompt 
