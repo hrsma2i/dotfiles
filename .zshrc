@@ -146,7 +146,7 @@ export SPACESHIP_GIT_SUFFIX="%K{10} %b%F{10}%K{0}⮀%f%k"
 
 # dir
 export SPACESHIP_DIR_PREFIX="%K{0} "
-export SPACESHIP_DIR_COLOR="3}%b%K{0"
+export SPACESHIP_DIR_COLOR="11}%K{0"
 export SPACESHIP_DIR_SUFFIX="%K{0} %b%F{0}%K{8}⮀ %F{8}%K{237}⮀%f%k\n"
 
 # pyenv
