@@ -138,16 +138,16 @@ export SPACESHIP_HOST_COLOR="15}%b%K{6"
 export SPACESHIP_HOST_SUFFIX="%K{6} %b%F{6}%K{237}⮀%f%k\n"
 
 # git
-export SPACESHIP_GIT_PREFIX=" \b"
 export SPACESHIP_GIT_SYMBOL="  "
+export SPACESHIP_GIT_PREFIX=" \b"
 export SPACESHIP_GIT_BRANCH_COLOR="}%F{237}%K{10"
 export SPACESHIP_GIT_STATUS_COLOR=$SPACESHIP_GIT_BRANCH_COLOR
 export SPACESHIP_GIT_SUFFIX="%K{10} %b%F{10}%K{0}⮀%f%k"
 
 # dir
 export SPACESHIP_DIR_PREFIX="%K{0} "
-export SPACESHIP_DIR_COLOR="7}%b%K{0"
-export SPACESHIP_DIR_SUFFIX="%K{0} %F{0}%K{8}⮀%F{8}%K{237}⮀%f%k\n"
+export SPACESHIP_DIR_COLOR="3}%b%K{0"
+export SPACESHIP_DIR_SUFFIX="%K{0} %b%F{0}%K{8}⮀ %F{8}%K{237}⮀%f%k\n"
 
 # pyenv
 export SPACESHIP_PYENV_COLOR="7}%K{8"
