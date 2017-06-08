@@ -46,6 +46,11 @@ esac
 # dein root
 export XDG_CONFIG_HOME=$HOME/.dotfiles
 
+# alias
+alias l=ls
+alias la="ls -a"
+alias ll="ls -al"
+
 #---------------------
 # pyenv
 #---------------------
