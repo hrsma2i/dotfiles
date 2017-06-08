@@ -8,6 +8,16 @@
 
 export TERM='xterm-256color'
 
+# dein root
+export XDG_CONFIG_HOME=$HOME/.dotfiles
+
+# alias
+alias ls="ls -F"
+alias l="ls"
+alias la="l -a"
+alias ll="l -al"
+alias dt="cd ~/.dotfiles"
+
 case ${OSTYPE} in
 	darwin*)
 		#paths
@@ -43,16 +53,6 @@ case ${OSTYPE} in
 		export ZPLUG_HOME=~/.linuxbrew/opt/zplug
 		;;
 esac
-
-# dein root
-export XDG_CONFIG_HOME=$HOME/.dotfiles
-
-# alias
-alias ls="ls -F"
-alias l="ls"
-alias la="l -a"
-alias ll="l -al"
-alias dt="cd ~/.dotfiles"
 
 #---------------------
 # pyenv
