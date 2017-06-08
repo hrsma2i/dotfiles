@@ -19,7 +19,6 @@ case ${OSTYPE} in
 		export PATH=$PATH:/Users/hiroshi/ta
 
 		#aliases
-		alias ls="ls -GF" # ls color
 		source $HOME/.dotfiles_old/.zsh/aliases.zsh
 		
 		#環境変数LANG
@@ -37,7 +36,7 @@ case ${OSTYPE} in
 		export ZPLUG_HOME=/usr/local/opt/zplug
 		;;
 	linux*)
-		alias ls="ls -F --color" # ls color
+		alias ls="ls --color" # ls color
 		#---------------------
 		# zplug HOME
 		#---------------------
