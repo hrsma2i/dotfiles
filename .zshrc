@@ -49,7 +49,7 @@ esac
 export XDG_CONFIG_HOME=$HOME/.dotfiles
 
 # alias
-alias l="ls"
+alias l="ls -F"
 alias la="l -a"
 alias ll="l -al"
 alias dt="cd ~/.dotfiles"
