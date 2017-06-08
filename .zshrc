@@ -179,6 +179,7 @@ function zle-keymap-select zle-line-init zle-line-finish
 #---------------------
 source $ZPLUG_HOME/init.zsh
 # 未インストール項目をインストールする
+zplug "denysdovhan/spaceship-zsh-theme", use:spaceship.zsh, from:github, as:them
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
     if read -q; then
