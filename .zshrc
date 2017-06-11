@@ -28,7 +28,7 @@ case ${OSTYPE} in
 		#---------------------
 		# ssh-agent
 		#---------------------
-		ssh-add -K ~/.ssh/amenbo >> /dev/null
+		ssh-add -K ~/.ssh/github_amenbo >> /dev/null
 		ssh-add -K ~/.ssh/github_hrsma2i >> /dev/null
 
 		#---------------------
