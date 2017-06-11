@@ -8,6 +8,10 @@
 
 export TERM='xterm-256color'
 
+if [[ -e $HOME/.local_aliases.zsh ]] ; then
+	source $HOME/.local_aliases.zsh
+fi
+
 case ${OSTYPE} in
 	darwin*)
 		#paths
