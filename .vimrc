@@ -122,4 +122,4 @@ inoremap jj <ESC>
 nnoremap J <C-d>
 nnoremap K <C-u>
 
-colorscheme molokai
+colorscheme onedark
