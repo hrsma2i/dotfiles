@@ -31,6 +31,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('Shougo/deoplete.nvim')
   call dein#add('jiangmiao/auto-pairs')
   call dein#add('tpope/vim-surround')
+  call dein#add('joshdick/onedark.vim')
   " markdown
   call dein#add('godlygeek/tabular')
   call dein#add('plasticboy/vim-markdown')
