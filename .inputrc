@@ -1,0 +1,13 @@
+set editing-mode vi
+set show-mode-in-prompt on
+$if mode=vi
+	set keymap vi-insert
+	"jj":vi-movement-mode
+	set vi-cmd-mode-string INSERT
+	set vi-ins-mode-string NORMAL
+	#FG_SKY_BLUE="\e[38;2;96;183;255m"
+	#BG_LIGHT_GREEN="\e[48;2;178;213;53m"
+	#RESET="\e[0m"
+	#set vi-cmd-mode-string "\[BG_LIGHT_GREEN\] NORMAL \[RESET\]"
+	#set vi-ins-mode-string "\[FG_SKY_BLUE\] INSERT \[RESET\]"
+$endif

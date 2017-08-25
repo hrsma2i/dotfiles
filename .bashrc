@@ -19,6 +19,9 @@ alias dt="cd ~/.dotfiles"
 
 # TERM="xterm-256color"
 
+# vi mode
+#set -o vi
+
 # prompt
 BLACK="\e[0;30m"
 RED="\e[0;31m"
@@ -30,7 +33,12 @@ PEECH="\e[48;5;209m"
 RESET="\e[0m"
 
 REV="\e[7m"
-PS1="\[$YELLOW\]\w\[$RESET\] \[$RED\]>\[$RESET\]\[$YELLOW\]>\[$RESET\]\[$GREEN\]>\[$RESET\]"
+#function prompt {
+#	PS1="\[$YELLOW\]\w\[$RESET\] \[$RED\]>\[$RESET\]\[$YELLOW\]>\[$RESET\]\[$GREEN\]>\[$RESET\]"
+#	echo -e "$(date +%R) $PWD"
+#}
+#PROMPT_COMMAND='prompt'
+PS1="\[\e[0m\]>>>"
 
 if [ `hostname` == "matsuiatsushi-no-MacBook-Pro.local" ]; then
 	echo ' 
