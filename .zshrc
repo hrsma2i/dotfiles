@@ -54,11 +54,26 @@ esac
 # dein root
 export XDG_CONFIG_HOME=$HOME/.dotfiles
 
+#---------------------
 # alias
+#---------------------
+
 alias l="ls -F"
 alias la="l -a"
 alias ll="l -al"
 alias dt="cd ~/.dotfiles"
+# git
+alias br="git branch"
+alias co="git checkout"
+alias cob="git checkout -b"
+alias st="git status"
+alias add="git add"
+alias cm="git commit -am"
+alias push="git push origin"
+alias pull="git pull origin master"
+alias mr="git merge"
+alias reset="git reset"
+
 
 #---------------------
 # pyenv
@@ -103,14 +118,21 @@ setopt hist_ignore_all_dups
 setopt EXTENDED_HISTORY
 #historyから選択
 hist_sentaku(){
-    eval $(history | cut -f6- -d " " | sentaku) 
+    eval $(history | cut -f2 -d "	" | sentaku) 
     zle reset-prompt
 }
 zle -N hist_sentaku hist_sentaku
 bindkey -v '' hist_sentaku
 
+# 履歴から補完
+#autoload history-search-end
+#zle -N history-beginning-search-backward-end history-search-end
+#zle -N history-beginning-search-forward-end history-search-end
+bindkey "^P" history-beginning-search-backward
+bindkey "^N" history-beginning-search-forward
 
-#ファイル一括リネーム
+
+#ファイル一括リネーム renameコマンドでよくね？
 autoload -Uz zmv
 alias zmv='noglob zmv -W'
 
