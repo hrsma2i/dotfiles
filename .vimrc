@@ -39,6 +39,8 @@ if dein#load_state(s:dein_dir)
   call dein#add('kannokanno/previm')
   call dein#add('zchee/deoplete-jedi')
   call dein#add('davidhalter/jedi')
+  " html
+  call dein#add('mattn/emmet-vim')
   " call dein#add('tyru/open-browser.vim')
 
   call dein#end()
