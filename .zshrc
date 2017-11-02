@@ -239,15 +239,15 @@ zplug load --verbose
 # git dotfiles
 #---------------------
 # upload
-dtu () {
+dotpush () {
 	cd ~/.dotfiles
 	git add .
-	git commit -am "fixed: "$1
+	git commit
 	git push origin master
 	cd -
 }
 # download
-dtd () {
+dotpull () {
 	cd ~/.dotfiles
 	git pull origin master
 	cd -
