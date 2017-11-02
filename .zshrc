@@ -68,10 +68,11 @@ alias co="git checkout"
 alias cob="git checkout -b"
 alias st="git status"
 alias add="git add"
-alias cm="git commit -am"
+alias cm="git commit"
+alias amend="git commit --amend"
 alias push="git push origin"
 alias pull="git pull origin master"
-alias mr="git merge"
+alias merge="git merge"
 alias reset="git reset"
 
 
