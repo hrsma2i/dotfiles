@@ -125,4 +125,8 @@ inoremap jj <ESC>
 nnoremap J <C-d>
 nnoremap K <C-u>
 
+" execute current buffer
+autocmd BufNewFile,BufRead *.rb nnoremap <C-e> :!ruby %
+autocmd BufNewFile,BufRead *.py nnoremap <C-e> :!python %
+
 colorscheme molokai
