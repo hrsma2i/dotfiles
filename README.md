@@ -1,1 +1,4 @@
 # My Dotfiles
+
+## prerequirements
+- git
