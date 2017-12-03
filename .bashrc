@@ -1,6 +1,7 @@
 # trash
 alias del="trash -r"
-alias rm
+alias rm="echo 'You should use \"del\" command, instead of \"rm\". 
+If you completely remove the file, you have to use \"/bin/rm\"'"
 
 # neovim
 alias vim="nvim"
