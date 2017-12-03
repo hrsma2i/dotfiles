@@ -1,2 +1,4 @@
 #!/bin/sh
-ln -fns ~/.dotfiles/.vimrc ~/.vimrc
+ln -fns .vimrc ~/.vimrc
+ln -fns .vim ~/.vim
+ln -fns .bash ~/.bash
