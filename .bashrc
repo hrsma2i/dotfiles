@@ -1,3 +1,6 @@
+# linuxbrew
+PATH=~/.linuxbrew/bin:~/.linuxbrew/sbin:$PATH
+
 # trash
 alias del="trash -r"
 alias rm="echo 'You should use \"del\" command, instead of \"rm\". 
