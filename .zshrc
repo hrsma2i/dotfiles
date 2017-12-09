@@ -119,12 +119,13 @@ setopt hist_ignore_all_dups
 # 開始と終了を記録
 setopt EXTENDED_HISTORY
 #historyから選択
-hist_sentaku(){
-    eval $(history | cut -f2 -d "	" | sentaku) 
+function peco-history-selection() {
+    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
+    CURSOR=$#BUFFER
     zle reset-prompt
 }
-zle -N hist_sentaku hist_sentaku
-bindkey -v '' hist_sentaku
+zle -N peco-history-selection
+bindkey -v '' peco-history-selection
 
 # 履歴から補完
 #autoload history-search-end
