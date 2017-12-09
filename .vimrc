@@ -36,6 +36,7 @@ if dein#load_state(s:dein_dir)
 
   call dein#add('Shougo/vimproc')
   call dein#add('Shougo/denite.nvim')
+  " deoplete needs python3
   call dein#add('Shougo/deoplete.nvim')
   call dein#add('jiangmiao/auto-pairs')
   call dein#add('tpope/vim-surround')
