@@ -1,10 +1,13 @@
 # linuxbrew
-PATH=~/.linuxbrew/bin:~/.linuxbrew/sbin:$PATH
+export PATH="~/.linuxbrew/bin:~/.linuxbrew/sbin:$PATH"
 
 # trash
 alias del="trash -r"
 alias rm="echo 'You should use \"del\" command, instead of \"rm\". 
 If you completely remove the file, you have to use \"/bin/rm\"'"
+
+# miniconda
+export PATH="~/miniconda3/bin:$PATH"
 
 # neovim
 alias vim="nvim"
