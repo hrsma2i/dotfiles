@@ -6,13 +6,8 @@ alias del="trash -r"
 alias rm="echo 'You should use \"del\" command, instead of \"rm\". 
 If you completely remove the file, you have to use \"/bin/rm\"'"
 
-# pyenv
-export PYENV_ROOT=~/.pyenv
-export PATH="$PYENV_ROOT/bin:$PATH"
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-
 # miniconda
-export PATH="~/miniconda3/bin:$PATH"
+export PATH="~/.miniconda3/bin:$PATH"
 
 # neovim
 alias vim="nvim"
