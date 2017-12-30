@@ -23,6 +23,7 @@ case ${OSTYPE} in
 		path_append /Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin
 		export PATH=$PATH:/Users/hiroshi/pycli
 		export PATH=$PATH:/Users/hiroshi/ta
+		export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 		#aliases
 		alias ls="ls -F"
@@ -118,6 +119,8 @@ export SAVEHIST=100000
 setopt hist_ignore_all_dups
 # 開始と終了を記録
 setopt EXTENDED_HISTORY
+# 先頭にspace入れたらhistoryに残さない
+setopt hist_ignore_space
 #historyから選択
 function peco-history-selection() {
     BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
