@@ -21,8 +21,7 @@ case ${OSTYPE} in
 		path_append /Applications/MacVim.app/Contents/MacOS
 		path_append ~/.dotfiles_old/.zsh/bin/
 		path_append /Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin
-		export PATH=$PATH:/Users/hiroshi/pycli
-		export PATH=$PATH:/Users/hiroshi/ta
+		export PATH=$PATH:$HOME/_clitools
 		export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 		#aliases
