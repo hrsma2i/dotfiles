@@ -32,12 +32,6 @@ case ${OSTYPE} in
 		export LANG=ja_JP.UTF-8
 		
 		#---------------------
-		# ssh-agent
-		#---------------------
-		ssh-add -K ~/.ssh/github_amenbo >> /dev/null
-		ssh-add -K ~/.ssh/github_hrsma2i >> /dev/null
-
-		#---------------------
 		# zplug HOME
 		#---------------------
 		export ZPLUG_HOME=/usr/local/opt/zplug
@@ -63,9 +57,6 @@ alias la="l -a"
 alias ll="l -al"
 alias dt="cd ~/.dotfiles"
 # git
-if type hub >/dev/null 2>&1; then
-	alias git="hub"
-fi
 alias br="git branch"
 alias co="git checkout"
 alias cob="git checkout -b"
