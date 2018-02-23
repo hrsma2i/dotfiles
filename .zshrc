@@ -63,6 +63,9 @@ alias la="l -a"
 alias ll="l -al"
 alias dt="cd ~/.dotfiles"
 # git
+if type hub >/dev/null 2>&1; then
+	alias git="hub"
+fi
 alias br="git branch"
 alias co="git checkout"
 alias cob="git checkout -b"

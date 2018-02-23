@@ -66,13 +66,17 @@ endif
 filetype plugin indent on
 syntax enable
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " settging for each plugin
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vimproc
 let g:vimproc#dll_path = '~/.cache/dein/repos/github.com/Shougo/vimproc/lib/vimproc_mac.so'
+
 " deoplete
 let g:deoplete#enable_at_startup = 1
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
 " previm
 let g:previm_open_cmd = "open -a Safari"
 augroup PrevimSettings
